@@ -1,75 +1,176 @@
-<div align="center">
-  <h1><img src="https://project-management-gs.vercel.app/favicon.ico" width="20" height="20" alt="project-management Favicon">
-   project-management</h1>
-  <p>
-    An open-source project management platform built with ReactJS and Tailwind CSS.
-  </p>
-  <p>
-    <a href="https://github.com/GreatStackDev/project-management/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/GreatStackDev/project-management?style=for-the-badge" alt="License"></a>
-    <a href="https://github.com/GreatStackDev/project-management/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome"></a>
-    <a href="https://github.com/GreatStackDev/project-management/issues"><img src="https://img.shields.io/github/issues/GreatStackDev/project-management?style=for-the-badge" alt="GitHub issues"></a>
-  </p>
-</div>
+# NexaWork -- The Next‑Gen Workspace Manager
 
----
+NexaWork is a modern, full‑stack project and workspace management
+platform built using **PostgreSQL, Express.js, React.js, Node.js**, and
+powerful workflow automation tools like **Inngest**.\
+It allows organizations to manage projects, tasks, members,
+notifications, and analytics seamlessly --- all within a single scalable
+platform.
 
-## 📖 Table of Contents
+------------------------------------------------------------------------
 
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#-tech-stack)
-- [🚀 Getting Started](#-getting-started)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
+## 🚀 Features
 
----
+### 🔹 **Multi‑Organization Workspaces**
 
-## 📝 Features <a name="-features"></a>
+-   Create multiple organizations\
+-   Switch between workspaces\
+-   Manage members independently for each organization
 
-- **Multiple Workspaces:** Allow multiple workspaces to be created, each with its own set of projects, tasks, and members.
-- **Project Management:** Manage projects, tasks, and team members.
-- **Analytics:** View project analytics, including progress, completion rate, and team size.
-- **Task Management:** Assign tasks to team members, set due dates, and track task status.
-- **User Management:** Invite team members, manage user roles, and view user activity.
+### 🔹 **Project & Task Management**
 
-## 🛠️ Tech Stack <a name="-tech-stack"></a>
+-   Create projects inside each workspace\
+-   Add tasks, set due dates, assign members\
+-   Track task progress and status updates
 
-- **Framework:** ReactJS
-- **Styling:** Tailwind CSS
-- **UI Components:** Lucide React for icons
-- **State Management:** Redux Toolkit
+### 🔹 **Smart Email Notifications**
 
-## 🚀 Getting Started <a name="-getting-started"></a>
+-   Automatic email when a task is assigned\
+-   Reminder emails on the due date\
+-   Powered by **Inngest background jobs**
 
-First, install the dependencies. We recommend using `npm` for this project.
+### 🔹 **User & Role Management**
 
-```bash
+-   Invite members to workspaces\
+-   Manage roles and permissions\
+-   View user activity
+
+### 🔹 **Project Analytics**
+
+-   Track completion rate\
+-   Monitor team size\
+-   Visualize project progress over time
+
+### 🔹 **Secure Authentication**
+
+-   Powered by **Clerk**\
+-   Workspace-level identity management
+
+### 🔹 **Real Database Integration**
+
+-   Built using **Neon PostgreSQL**\
+-   Store organizations, users, tasks, and projects\
+-   Optimized relational schema for scalability
+
+------------------------------------------------------------------------
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+
+-   React.js\
+-   Tailwind CSS\
+-   Redux Toolkit\
+-   Lucide React Icons
+
+### **Backend**
+
+-   Node.js\
+-   Express.js\
+-   PostgreSQL (Neon)\
+-   Prisma ORM\
+-   Clerk Authentication\
+-   Inngest Job Scheduler
+
+### **Deployment**
+
+-   Vercel (Frontend + Backend Functions)\
+-   Neon PostgreSQL Cloud
+
+------------------------------------------------------------------------
+
+## 📁 Folder Structure
+
+    nexawork/
+    │
+    ├── backend/
+    │   ├── src/
+    │   │   ├── routes/
+    │   │   ├── controllers/
+    │   │   ├── prisma/
+    │   │   ├── middleware/
+    │   │   └── utils/
+    │   ├── package.json
+    │   └── server.js
+    │
+    ├── frontend/
+    │   ├── public/
+    │   ├── src/
+    │   │   ├── components/
+    │   │   ├── pages/
+    │   │   ├── hooks/
+    │   │   ├── store/
+    │   │   └── app.jsx
+    │   ├── package.json
+    │   └── vite.config.js
+    │
+    └── README.md
+
+------------------------------------------------------------------------
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+
+``` bash
+git clone https://github.com/yourusername/NexaWork.git
+cd NexaWork
+```
+
+### 2️⃣ Install dependencies
+
+#### Backend
+
+``` bash
+cd backend
 npm install
 ```
 
-Then, run the development server:
+#### Frontend
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+``` bash
+cd frontend
+npm install
 ```
 
-Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+------------------------------------------------------------------------
 
-You can start editing the page by modifying `src/App.jsx`. The page auto-updates as you edit the file.
+## ▶️ Run the development servers
 
----
+### Backend
 
-## 🤝 Contributing <a name="-contributing"></a>
+``` bash
+npm run dev
+```
 
-We welcome contributions! Please see our [CONTRIBUTING.md](./CONTRIBUTING.md) for more details on how to get started.
+### Frontend
 
----
+``` bash
+npm run dev
+```
 
-## 📜 License <a name="-license"></a>
+Open **http://localhost:5173** to view the app in your browser.
 
-This project is licensed under the MIT License. See the [LICENSE.md](./LICENSE.md) file for details.
+------------------------------------------------------------------------
+
+## 🧩 Environment Variables
+
+### **Backend `.env`**
+
+    DATABASE_URL="your_neon_postgres_url"
+    CLERK_SECRET_KEY="your_clerk_key"
+    INGEST_API_KEY="your_inngest_key"
+
+### **Frontend `.env`**
+
+    VITE_CLERK_PUBLISHABLE_KEY="your_key"
+    VITE_API_URL="backend_url"
+
+------------------------------------------------------------------------
+
+
+
+## ⭐ Support
+
+If you like this project, please ⭐ the repository --- it motivates
+further development!
